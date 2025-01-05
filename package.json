@@ -12,12 +12,14 @@
         "status": "magento-scripts status",
         "exec": "magento-scripts exec",
         "import-db": "magento-scripts import-db",
-        "cleanup": "magento-scripts cleanup"
+        "cleanup": "magento-scripts cleanup",
+        "test": "node --no-deprecation git-test/index.js"
     },
     "scandipwa": {
         "type": "magento"
     },
     "dependencies": {
-        "@scandipwa/magento-scripts": "2.3.6"
+        "@scandipwa/magento-scripts": "2.3.6",
+        "simple-git": "^3.27.0"
     }
 }
