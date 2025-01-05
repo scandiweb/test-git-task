@@ -114,17 +114,35 @@ const executeTest = async (argv) => {
         stdio: [0, 1, 2],
     });
 
+    spawn("bash", ["-c", "git --no-pager log --oneline"], {
+        stdio: [0, 1, 2],
+    });
+
     executeTest({
         containername: "php",
         commands: [
-            `/bin/bash -c "composer install --dry-run 2>&1 | grep -q 'The lock file is not up to date with the latest changes in composer.json. You may be getting outdated dependencies. It is recommended that you run' && echo \`tput setaf 1\`'composer.lock is not fixed' || echo \`tput setaf 2\`'composer.lock is up to date'"`,
+            `/bin/bash -c "composer install --dry-run 2>&1 | grep -q 'The lock file is not up to date with the latest changes in composer.json. You may be getting outdated dependencies. It is recommended that you run' && echo \`tput setaf 1\`'composer.lock is broken: SHA does not match the content' || echo \`tput setaf 2\`'composer.lock is integrable and SHA is correct'"`,
         ],
     });
 
     executeTest({
         containername: "php",
         commands: [
-            `/bin/bash -c "composer show | grep -q 'markshust/magento2-module-simpledata' && echo \`tput setaf 1\`'composer.lock is having a file from dev branch!' || echo \`tput setaf 2\`'composer.lock only has required modules'"`,
+            `/bin/bash -c "composer install --dry-run 2>&1 | grep -q '\\- Installing ' && echo \`tput setaf 1\`'composer.lock does not match files in vendor folder' || echo \`tput setaf 2\`'composer.lock is up to date with vendor folder'"`,
+        ],
+    });
+
+    executeTest({
+        containername: "php",
+        commands: [
+            `/bin/bash -c "cat composer.lock | grep -q 'markshust/magento2-module-simpledata' && echo \`tput setaf 1\`'composer.lock is having a file from dev branch!' || echo \`tput setaf 2\`'composer.lock only has required modules'"`,
+        ],
+    });
+
+    executeTest({
+        containername: "php",
+        commands: [
+            `/bin/bash -c "cat composer.lock | grep -q 'markshust/magento2-module-disabletwofactorauth' && echo \`tput setaf 2\`'composer.lock is having the 2FA module installed' || echo \`tput setaf 1\`'composer.lock does not have 2FA module installed'"`,
         ],
     });
 })();
