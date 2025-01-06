@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2336645dfd04fa77fe705768550cf795",
+    "content-hash": "33e08bb2638a60f7853d7220a92f12e6",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -19171,6 +19171,50 @@
             "time": "2024-12-18T14:59:28+00:00"
         },
         {
+            "name": "markshust/magento2-module-simpledata",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/markshust/magento2-module-simpledata.git",
+                "reference": "ef6db3be09643e39d24d6a919153b086f3a28818"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/markshust/magento2-module-simpledata/zipball/ef6db3be09643e39d24d6a919153b086f3a28818",
+                "reference": "ef6db3be09643e39d24d6a919153b086f3a28818",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": ">=101",
+                "php": ">=7.1"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "MarkShust\\SimpleData\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The SimpleData module simplifies calling Magento data structures.",
+            "support": {
+                "issues": "https://github.com/markshust/magento2-module-simpledata/issues",
+                "source": "https://github.com/markshust/magento2-module-simpledata/tree/2.0.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/markshust",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-06-29T11:38:04+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "2.10.0",
             "source": {
@@ -29424,10 +29468,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }
