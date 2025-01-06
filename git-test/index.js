@@ -114,15 +114,17 @@ function wait(ms) {
 }
 
 (async () => {
-    spawn("git", ["config", "user.name"], {
+    spawn("bash", ["-c", "clear"], {
         stdio: [0, 1, 2],
     });
 
     await wait(50);
-
     spawn(
         "bash",
-        ["-c", `echo "\`tput bold\`Branch is: $(git branch --show-current)"`],
+        [
+            "-c",
+            `echo "User: $(git config user.name), $(git config user.email)"`,
+        ],
         {
             stdio: [0, 1, 2],
         }
@@ -130,7 +132,20 @@ function wait(ms) {
 
     await wait(50);
 
-    spawn("bash", ["-c", "git --no-pager log --oneline"], {
+    spawn(
+        "bash",
+        [
+            "-c",
+            `echo "\`tput bold\`Branch is: \`tput setaf 2\`$(git branch --show-current)\`tput sgr0\`, $(date +%Y-%m-%d)\`tput sgr0\`"`,
+        ],
+        {
+            stdio: [0, 1, 2],
+        }
+    );
+
+    await wait(50);
+
+    spawn("bash", ["-c", "git --no-pager log --oneline --graph --decorate"], {
         stdio: [0, 1, 2],
     });
 
