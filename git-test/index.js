@@ -109,10 +109,26 @@ const executeTest = async (argv) => {
     process.exit(1);
 };
 
+function wait(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 (async () => {
     spawn("git", ["config", "user.name"], {
         stdio: [0, 1, 2],
     });
+
+    await wait(50);
+
+    spawn(
+        "bash",
+        ["-c", `echo "\`tput bold\`Branch is: $(git branch --show-current)"`],
+        {
+            stdio: [0, 1, 2],
+        }
+    );
+
+    await wait(50);
 
     spawn("bash", ["-c", "git --no-pager log --oneline"], {
         stdio: [0, 1, 2],
@@ -135,7 +151,7 @@ const executeTest = async (argv) => {
     executeTest({
         containername: "php",
         commands: [
-            `/bin/bash -c "cat composer.lock | grep -q 'markshust/magento2-module-simpledata' && echo \`tput setaf 1\`'composer.lock is having a file from dev branch!' || echo \`tput setaf 2\`'composer.lock only has required modules'"`,
+            `/bin/bash -c "cat composer.lock | grep -q 'markshust/magento2-module-simpledata' && echo \`tput setaf 4\`'composer.lock is having a file from dev branch. Ok if you are on dev branch' || echo \`tput setaf 2\`'composer.lock only has required modules'"`,
         ],
     });
 
