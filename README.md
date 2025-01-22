@@ -1,13 +1,15 @@
 # GIT workflow task
 
 ### Prerequisites: Fork the repository
-You need to fork this repository to your own GitHub account so you can open PRs and merge without conflicts. Click on the fork button on the top right corner of this repository.
+1. You need to fork this repository to your own GitHub account so you can open PRs and merge without conflicts. Click on the fork button on the top right corner of this repository.
 
-**Make sure to uncheck the *"Copy the production branch only"* option.**
-<details>
-   <summary>Click for image</summary>
-<img src="git-test/creating-a-fork.png" alt="fork" />
-</details>
+   **Make sure to uncheck the *"Copy the production branch only"* option.**
+   <details>
+      <summary>Click for image</summary>
+   <img src="git-test/creating-a-fork.png" alt="fork" />
+   </details>
+
+2. You need your own keys for [Magento](repo.magento.com). During installation you will be guided an instruction on how to get them.
 
 ## Task
 You need to install a module from `https://github.com/markshust/magento2-module-disabletwofactorauth`.
@@ -27,7 +29,7 @@ You need to install a module from `https://github.com/markshust/magento2-module-
    8. Open a PR to merge the changes to the `production` branch of your forked repository
    9. Merge the PR to `production` branch
 
-    <br/>
+   <br/>
    Image for context:
    <img src="git-test/git-workflow.png" alt="workflow" />
    </details>
