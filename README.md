@@ -9,7 +9,7 @@
    <img src="git-test/creating-a-fork.png" alt="fork" />
    </details>
 
-2. You need your own keys for [Magento](repo.magento.com). During installation you will be guided an instruction on how to get them.
+2. You need your own keys for [Magento](https://commercemarketplace.adobe.com/). During installation you will be guided an instruction on how to get them.
 
 ## Task
 You need to install a module from `https://github.com/markshust/magento2-module-disabletwofactorauth`.
