@@ -12,7 +12,7 @@
 2. You need your own keys for [Magento](https://commercemarketplace.adobe.com/). During installation you will be guided an instruction on how to get them.
 
 ## Task
-You need to install a module from `https://github.com/markshust/magento2-module-disabletwofactorauth`.
+You need to install a module from [`MarkShust_DisableTwoFactorAuth`](https://github.com/markshust/magento2-module-disabletwofactorauth).
 
 ### Steps and requirements
 #### 1. Follow the workflow from course to install the module.
@@ -35,10 +35,10 @@ You need to install a module from `https://github.com/markshust/magento2-module-
    </details>
 
 #### 2. Expected results:
-   1. The module should be installed and working on `production` and `dev` branches.
+   1. The `MarkShust_DisableTwoFactorAuth` module should be installed and working on `production` and `dev` branches.
    2. The `composer.json` and `composer.lock` files should be updated with the new module.
    3. The `composer.lock` file should be *integrable*. This means that the SHA in the `composer.lock` file should be up to date.
-   4. The `production` branch **shouldn't have any commits or files** from the `dev` branch.
+   4. The `production` branch **shouldn't have any commits, modules or files** from the `dev` branch.
 
 #### 3. Testing:
    1. You will have to test the repo running `npm run test` to make sure the module is working correctly on both `dev` and `production` branches.
