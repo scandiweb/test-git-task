@@ -152,28 +152,35 @@ function wait(ms) {
     executeTest({
         containername: "php",
         commands: [
-            `/bin/bash -c "composer install --dry-run 2>&1 | grep -q 'The lock file is not up to date with the latest changes in composer.json. You may be getting outdated dependencies. It is recommended that you run' && echo \`tput setaf 1\`'composer.lock is broken: SHA does not match the content' || echo \`tput setaf 2\`'composer.lock is integrable and SHA is correct'"`,
+            `/bin/bash -c "composer install --dry-run 2>&1 | grep -q 'The lock file is not up to date with the latest changes in composer.json. You may be getting outdated dependencies. It is recommended that you run' && echo \`tput setaf 1\`'TEST FAILED: composer.lock is broken: SHA does not match the content' || echo \`tput setaf 2\`'composer.lock is integrable and SHA is correct'"`,
         ],
     });
 
     executeTest({
         containername: "php",
         commands: [
-            `/bin/bash -c "composer install --dry-run 2>&1 | grep -q '\\- Installing ' && echo \`tput setaf 1\`'composer.lock does not match files in vendor folder' || echo \`tput setaf 2\`'composer.lock is up to date with vendor folder'"`,
+            `/bin/bash -c "composer install --dry-run 2>&1 | grep -q '\\- Installing ' && echo \`tput setaf 1\`'TEST FAILED: composer.lock does not match files in vendor folder' || echo \`tput setaf 2\`'composer.lock is up to date with vendor folder'"`,
         ],
     });
 
     executeTest({
         containername: "php",
         commands: [
-            `/bin/bash -c "cat composer.lock | grep -q 'markshust/magento2-module-simpledata' && echo \`tput setaf 4\`'composer.lock is having a file from dev branch. Ok if you are on dev branch' || echo \`tput setaf 2\`'composer.lock only has required modules'"`,
+            `/bin/bash -c "if [ \$(git branch --show-current | tr -d '[:space:]') == 'production' ]; then cat composer.lock | grep -q 'markshust/magento2-module-simpledata' && echo \`tput setaf 1\`'TEST FAILED: composer.lock is having a file from dev branch' || echo \`tput setaf 2\`'composer.lock only has required modules'; fi"`,
         ],
     });
 
     executeTest({
         containername: "php",
         commands: [
-            `/bin/bash -c "cat composer.lock | grep -q 'markshust/magento2-module-disabletwofactorauth' && echo \`tput setaf 2\`'composer.lock is having the 2FA module installed' || echo \`tput setaf 1\`'composer.lock does not have 2FA module installed'"`,
+            `/bin/bash -c "if [ \$(git branch --show-current | tr -d '[:space:]') == 'dev' ]; then cat composer.lock | grep -q 'markshust/magento2-module-simpledata' || echo \`tput setaf 1\`'TEST FAILED: composer.lock does not have the previously required module for dev branch' && echo \`tput setaf 2\`'composer.lock has previously required module for dev branch'; fi"`,
+        ],
+    });
+
+    executeTest({
+        containername: "php",
+        commands: [
+            `/bin/bash -c "cat composer.lock | grep -q 'markshust/magento2-module-disabletwofactorauth' && echo \`tput setaf 2\`'composer.lock is having the 2FA module installed' || echo \`tput setaf 1\`'TEST FAILED: composer.lock does not have 2FA module installed'"`,
         ],
     });
 })();
