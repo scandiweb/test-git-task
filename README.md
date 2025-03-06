@@ -1,7 +1,7 @@
 # GIT workflow task
 
 ### Prerequisites: Fork the repository
-1. You need to fork this repository to your own GitHub account so you can open PRs and merge without conflicts. Click on the fork button on the top right corner of this repository.
+1. You need to fork this repository to your own GitHub account so you can open PRs to YOUR FORK and merge without conflicts. Click on the fork button on the top right corner of this repository.
 
    **Make sure to uncheck the *"Copy the production branch only"* option.**
    <details>
