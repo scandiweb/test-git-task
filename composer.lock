@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "15d4c710c82b8360fee9121fc50eb312",
+    "content-hash": "7c7e9f13ad7212554ef374d94ad3e121",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -16630,12 +16630,6 @@
             "license": [
                 "OSL-3.0",
                 "AFL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Kalpesh Mehta",
-                    "email": "k@lpe.sh"
-                }
             ],
             "description": "Security.txt file for Magento 2 websites"
         },
