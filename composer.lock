@@ -19210,6 +19210,51 @@
             "time": "2025-03-17T12:32:34+00:00"
         },
         {
+            "name": "markshust/magento2-module-simpledata",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/markshust/magento2-module-pagebuildersourcecode.git",
+                "reference": "fc32fd948ef4a222105c8ff3a17f40419cfe4835"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/markshust/magento2-module-pagebuildersourcecode/zipball/fc32fd948ef4a222105c8ff3a17f40419cfe4835",
+                "reference": "fc32fd948ef4a222105c8ff3a17f40419cfe4835",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "^100|^101|^102|^103",
+                "magento/module-page-builder": "^1||^2",
+                "php": "^7||^8"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "MarkShust\\PageBuilderSourceCode\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The Page Builder Source Code module adds a Source Code button to the toolbar of the Page Builder WYSIWYG editor.",
+            "support": {
+                "issues": "https://github.com/markshust/magento2-module-pagebuildersourcecode/issues",
+                "source": "https://github.com/markshust/magento2-module-pagebuildersourcecode/tree/2.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/markshust",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-03-17T12:32:34+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "2.10.0",
             "source": {
