@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "1afe1c9df077bbdddf3cac85d28f2d0e",
+=======
+    "content-hash": "7c7e9f13ad7212554ef374d94ad3e121",
+>>>>>>> 98ddb540fd279cda01f7025c1ae72f8794f6cfe8
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -16631,12 +16635,6 @@
                 "OSL-3.0",
                 "AFL-3.0"
             ],
-            "authors": [
-                {
-                    "name": "Kalpesh Mehta",
-                    "email": "k@lpe.sh"
-                }
-            ],
             "description": "Security.txt file for Magento 2 websites"
         },
         {
@@ -19171,6 +19169,7 @@
             "time": "2024-12-18T14:59:28+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "markshust/magento2-module-pagebuildersourcecode",
             "version": "2.0.1",
             "source": {
@@ -19188,6 +19187,24 @@
                 "magento/framework": "^100|^101|^102|^103",
                 "magento/module-page-builder": "^1||^2",
                 "php": "^7||^8"
+=======
+            "name": "markshust/magento2-module-simpledata",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/markshust/magento2-module-simpledata.git",
+                "reference": "ef6db3be09643e39d24d6a919153b086f3a28818"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/markshust/magento2-module-simpledata/zipball/ef6db3be09643e39d24d6a919153b086f3a28818",
+                "reference": "ef6db3be09643e39d24d6a919153b086f3a28818",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": ">=101",
+                "php": ">=7.1"
+>>>>>>> 98ddb540fd279cda01f7025c1ae72f8794f6cfe8
             },
             "type": "magento2-module",
             "autoload": {
@@ -19195,17 +19212,28 @@
                     "registration.php"
                 ],
                 "psr-4": {
+<<<<<<< HEAD
                     "MarkShust\\PageBuilderSourceCode\\": ""
+=======
+                    "MarkShust\\SimpleData\\": ""
+>>>>>>> 98ddb540fd279cda01f7025c1ae72f8794f6cfe8
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
+<<<<<<< HEAD
             "description": "The Page Builder Source Code module adds a Source Code button to the toolbar of the Page Builder WYSIWYG editor.",
             "support": {
                 "issues": "https://github.com/markshust/magento2-module-pagebuildersourcecode/issues",
                 "source": "https://github.com/markshust/magento2-module-pagebuildersourcecode/tree/2.0.1"
+=======
+            "description": "The SimpleData module simplifies calling Magento data structures.",
+            "support": {
+                "issues": "https://github.com/markshust/magento2-module-simpledata/issues",
+                "source": "https://github.com/markshust/magento2-module-simpledata/tree/2.0.2"
+>>>>>>> 98ddb540fd279cda01f7025c1ae72f8794f6cfe8
             },
             "funding": [
                 {
@@ -19213,7 +19241,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2025-03-17T12:32:34+00:00"
+=======
+            "time": "2022-06-29T11:38:04+00:00"
+>>>>>>> 98ddb540fd279cda01f7025c1ae72f8794f6cfe8
         },
         {
             "name": "monolog/monolog",
