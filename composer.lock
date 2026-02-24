@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1afe1c9df077bbdddf3cac85d28f2d0e",
+    "content-hash": "15d4c710c82b8360fee9121fc50eb312",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -16631,12 +16631,6 @@
                 "OSL-3.0",
                 "AFL-3.0"
             ],
-            "authors": [
-                {
-                    "name": "Kalpesh Mehta",
-                    "email": "k@lpe.sh"
-                }
-            ],
             "description": "Security.txt file for Magento 2 websites"
         },
         {
@@ -19169,51 +19163,6 @@
                 "source": "https://github.com/magento/magento-zend-pdf/tree/1.16.4"
             },
             "time": "2024-12-18T14:59:28+00:00"
-        },
-        {
-            "name": "markshust/magento2-module-pagebuildersourcecode",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/markshust/magento2-module-pagebuildersourcecode.git",
-                "reference": "fc32fd948ef4a222105c8ff3a17f40419cfe4835"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/markshust/magento2-module-pagebuildersourcecode/zipball/fc32fd948ef4a222105c8ff3a17f40419cfe4835",
-                "reference": "fc32fd948ef4a222105c8ff3a17f40419cfe4835",
-                "shasum": ""
-            },
-            "require": {
-                "magento/framework": "^100|^101|^102|^103",
-                "magento/module-page-builder": "^1||^2",
-                "php": "^7||^8"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "MarkShust\\PageBuilderSourceCode\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "The Page Builder Source Code module adds a Source Code button to the toolbar of the Page Builder WYSIWYG editor.",
-            "support": {
-                "issues": "https://github.com/markshust/magento2-module-pagebuildersourcecode/issues",
-                "source": "https://github.com/markshust/magento2-module-pagebuildersourcecode/tree/2.0.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/markshust",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-03-17T12:32:34+00:00"
         },
         {
             "name": "monolog/monolog",
